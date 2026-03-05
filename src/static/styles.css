@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -26,6 +27,32 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+#user-controls {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+#login-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #1a237e;
+  border: 1px solid #c5cae9;
+  font-size: 14px;
+}
+
+#login-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+#login-toggle:hover {
+  background-color: #e8eaf6;
 }
 
 main {
@@ -97,7 +124,8 @@ section h3 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 /* Remove the bullet point pseudo-element */
@@ -111,18 +139,18 @@ section h3 {
 }
 
 .delete-btn {
-  background: none;
-  border: none;
-  color: #c62828;
+  background: #fce4ec;
+  border: 1px solid #f8bbd0;
+  color: #ad1457;
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 5px;
+  font-size: 12px;
+  padding: 4px 8px;
   transition: all 0.2s;
   border-radius: 3px;
 }
 
 .delete-btn:hover {
-  background-color: #ffebee;
+  background-color: #f8bbd0;
 }
 
 .participants-section p {
@@ -158,6 +186,57 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.secondary {
+  background-color: #eceff1;
+  color: #263238;
+}
+
+.secondary:hover {
+  background-color: #cfd8dc;
+}
+
+.info-banner {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #bbdefb;
+}
+
+#signup-form.blocked {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-panel {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-panel h3 {
+  margin-bottom: 16px;
+  color: #1a237e;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
 }
 
 button:hover {

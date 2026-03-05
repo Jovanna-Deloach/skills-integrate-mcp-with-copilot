@@ -8,6 +8,16 @@
   </head>
   <body>
     <header>
+      <div id="user-controls">
+        <button id="login-toggle" type="button" aria-label="Teacher login">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.4 0-8 2-8 4.5V21h16v-2.5C20 16 16.4 14 12 14z"
+            ></path>
+          </svg>
+          <span id="auth-label">Teacher login</span>
+        </button>
+      </div>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
     </header>
@@ -23,6 +33,9 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="auth-hint" class="info-banner">
+          Teacher login is required to register or unregister students.
+        </p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -44,6 +57,26 @@
     <footer>
       <p>&copy; 2023 Mergington High School</p>
     </footer>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-panel">
+        <h3 id="login-title">Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="teacher username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="password" />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Login</button>
+            <button id="close-login" type="button" class="secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
